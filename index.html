@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog Mạnh Hùng</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="./nodejs./js.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="d1">
+        <label>Tài Khoản</label>
+        <br>
+        <input type="text" id="username">
+    </div>
+    <div class="d2">
+        <label>Mật Khẩu</label>
+        <br>
+        <input type="password" id="password">
+    </div>
+    <div class="d3">
+        <label>Nhập lại mật khẩu</label>
+        <br>
+        <input type="text" id="re_password">
+    </div>
+    <div class="d4">
+        <button type="submit" id="subcrible" onclick="kiemTraForm()">Đăng ký</button>
+    </div>
+    <script>
+        function kiemTraForm() {
+            var username = document.getElementById("username").value
+            var password = document.getElementById("password").value
+            var re_password = document.getElementById("re_password").value
+
+            if (username === "") {
+                alert("Chưa nhập Tài khoản")
+                return false;
+            } else if (password === "") {
+                alert("Chưa nhập Mật khẩu")
+                return false;
+            }
+            if (password != re_password) {
+                alert("Mật khẩu không khớp")
+                return fasle
+            }
+            return true
+
+        }
+    </script>
+</body>
+
+</html>
